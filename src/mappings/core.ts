@@ -156,6 +156,7 @@ export function handleTransfer(event: Transfer): void {
       burn.pair = pair.id
       burn.liquidity = value
       burn.timestamp = transaction.timestamp
+      burn.transaction = transaction.id
     }
 
     // if this logical burn included a fee mint, account for this
@@ -328,6 +329,10 @@ export function handleBurn(event: Burn): void {
   let transaction = Transaction.load(event.transaction.hash.toHexString())
   let burns = transaction.burns
   let burn = BurnEvent.load(burns[burns.length - 1])
+
+  if (!burn) {
+    return
+  }
 
   let pair = Pair.load(event.address.toHex())
   let uniswap = UniswapFactory.load(FACTORY_ADDRESS)
