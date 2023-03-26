@@ -3,7 +3,7 @@ import { Pair, Token, Bundle } from '../types/schema'
 import { BigDecimal, Address, BigInt } from '@graphprotocol/graph-ts/index'
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from './helpers'
 
-const WXDAI_ADDRESS = '0xe91d153e0b41518a2ce8dd3d7944fa863463a97d'
+const WXDAI_ADDRESS = '0x27f6A322587755DA937Ba2D4c5db2d2918957BB8'
 
 export function getEthPriceInUSD(): BigDecimal {
   return ONE_BD
@@ -11,11 +11,11 @@ export function getEthPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  '0x71850b7e9ee3f13ab46d67167341e4bdc905eef9', // HONEY
-  '0xe91d153e0b41518a2ce8dd3d7944fa863463a97d', // WXDAI
-  '0xddafbb505ad214d7b80b1f830fccc89b60fb7a83', // USDC on xDai
-  '0x4ecaba5870353805a9f068101a40e0f32ed605c6', // Tether on xDai
-  '0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1' // Wrapped Ether on xDai
+  //'0x71850b7e9ee3f13ab46d67167341e4bdc905eef9', // HONEY
+  '0x27f6A322587755DA937Ba2D4c5db2d2918957BB8', // WXDAI
+  //'0xddafbb505ad214d7b80b1f830fccc89b60fb7a83', // USDC on xDai
+  //'0x4ecaba5870353805a9f068101a40e0f32ed605c6', // Tether on xDai
+  //'0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1' // Wrapped Ether on xDai
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
