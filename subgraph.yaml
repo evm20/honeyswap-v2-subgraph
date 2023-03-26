@@ -8,9 +8,9 @@ dataSources:
     name: Factory
     network: xdai
     source:
-      address: '0xA818b4F111Ccac7AA31D0BCc0806d64F2E0737D7'
+      address: '0x59aA1Cccb0aFC00D15082f58fB66B574cb8e8cC0'
       abi: Factory
-      startBlock: 11813490
+      startBlock: 236156804
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
